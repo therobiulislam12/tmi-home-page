@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&family=Cinzel:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+@layer components {
+  /* Centered content layout: max 1340px, 20px gutter on small screens */
+  .container-mi {
+    @apply mx-auto w-full max-w-container px-5;
+  }
+
+  /* Full-width row (header): spans the viewport, 30px side padding */
+  .container-full {
+    @apply w-full px-[30px];
+  }
+}

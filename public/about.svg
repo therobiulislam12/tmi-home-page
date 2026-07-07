@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7fb2d6"/>
+      <stop offset="0.5" stop-color="#557a52"/>
+      <stop offset="1" stop-color="#2f4a2c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" fill="url(#sky)"/>
+  <g fill="#3c5a37" opacity="0.7">
+    <ellipse cx="180" cy="140" rx="160" ry="90"/>
+    <ellipse cx="520" cy="110" rx="200" ry="110"/>
+    <ellipse cx="900" cy="150" rx="180" ry="100"/>
+  </g>
+  <rect y="440" width="1200" height="180" fill="#26401f"/>
+  <text x="600" y="330" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff" opacity="0.85">DISCOVERY WETLANDS</text>
+</svg>
