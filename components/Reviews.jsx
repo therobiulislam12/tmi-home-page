@@ -1,6 +1,7 @@
 // "Reviews" — three staggered testimonial cards.
 // Card bg = /review-card-bg.jpg, 25px radius. Quote on top, person pinned bottom.
 // Replace each `avatar` with a real customer photo (150×150).
+import { asset } from "@/lib/asset";
 
 // Neutral silhouette placeholder so the avatars render before real photos exist.
 const AVATAR_PLACEHOLDER =
@@ -45,7 +46,7 @@ export default function Reviews() {
               className={`flex min-h-[620px] flex-col justify-between overflow-hidden rounded-[25px] bg-cover bg-center p-10 ${
                 i === 1 ? "lg:mt-16" : ""
               }`}
-              style={{ backgroundImage: "url('/review-card-bg.jpg')" }}
+              style={{ backgroundImage: `url('${asset("/review-card-bg.jpg")}')` }}
             >
               {/* Quote */}
               <p className="font-manrope text-[24px] font-light leading-[36px] text-white/90">

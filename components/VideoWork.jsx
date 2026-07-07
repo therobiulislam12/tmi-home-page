@@ -2,6 +2,8 @@
 // Each card = background thumbnail + dark overlay + brand logo + title.
 // On hover the title turns the accent colour.
 // Swap `image` (thumbnail), `logo` (brand mark), and `href` (video link) per card.
+import { asset } from "@/lib/asset";
+
 const VIDEOS = [
   {
     title: "Giant Raya Commercial",
@@ -59,7 +61,7 @@ export default function VideoWork() {
               {/* Thumbnail */}
               <div
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url('${video.image}')` }}
+                style={{ backgroundImage: `url('${asset(video.image)}')` }}
               />
               {/* Dark overlay */}
               <div
@@ -74,7 +76,7 @@ export default function VideoWork() {
               <div className="relative flex h-full flex-col items-center justify-center p-6 text-center">
                 {video.logo && (
                   <img
-                    src={video.logo}
+                    src={asset(video.logo)}
                     alt=""
                     className="h-[100px] w-[300px] max-w-full object-contain"
                   />

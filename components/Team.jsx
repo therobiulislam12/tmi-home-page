@@ -1,6 +1,8 @@
 // "Our Team" — full-bleed image on the left half, copy on the right.
 // The image runs to the left viewport edge; the text stays aligned to the
 // site container on the right. Swap IMAGE for the real team photo.
+import { asset } from "@/lib/asset";
+
 const IMAGE = "/work/1.jpg";
 
 export default function Team() {
@@ -10,7 +12,7 @@ export default function Team() {
         {/* Left: full-bleed image (half width, flush to viewport edge) */}
         <div
           className="h-[360px] w-full bg-cover bg-center bg-no-repeat grayscale lg:h-[600px]"
-          style={{ backgroundImage: `url('${IMAGE}')` }}
+          style={{ backgroundImage: `url('${asset(IMAGE)}')` }}
         />
 
         {/* Right: copy, constrained to the container gutter */}

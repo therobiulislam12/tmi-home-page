@@ -1,4 +1,6 @@
 // Swap these SVG placeholders for the real logo files in /public/logos.
+import { asset } from "@/lib/asset";
+
 const LOGOS = [
   { name: "ATA", src: "/logos/ata.svg" },
   { name: "aL-ikhsaN", src: "/logos/al-ikhsan.svg" },
@@ -22,7 +24,7 @@ export default function ClientLogos() {
           {[...LOGOS, ...LOGOS].map((logo, i) => (
             <div key={i} className="flex shrink-0 items-center justify-center px-10 md:px-14">
               <img
-                src={logo.src}
+                src={asset(logo.src)}
                 alt={logo.name}
                 className="h-10 w-auto object-contain md:h-12"
               />

@@ -1,5 +1,7 @@
 // One image sliced into 5 vertical strips, each staggered vertically.
 // Swap /public/about.svg for a real photo (e.g. about.jpg) and update IMAGE below.
+import { asset } from "@/lib/asset";
+
 const IMAGE = "/about.svg";
 
 const STRIPS = [
@@ -61,7 +63,7 @@ export default function About() {
               key={i}
               className={`h-full flex-1 overflow-hidden rounded-sm ${strip.offset}`}
               style={{
-                backgroundImage: `url('${IMAGE}')`,
+                backgroundImage: `url('${asset(IMAGE)}')`,
                 backgroundSize: "500% 100%",
                 backgroundPosition: `${strip.pos} center`,
               }}

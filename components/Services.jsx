@@ -1,6 +1,8 @@
 // "Our Video Production Services" — 3×3 grid.
 // Cell 1 is the intro copy; the other 8 are clickable cards whose
 // background image smoothly zooms in on hover. Swap `img`/`href` per card.
+import { asset } from "@/lib/asset";
+
 const SERVICES = [
   {
     title: "Corporate Video Production",
@@ -80,7 +82,7 @@ export default function Services() {
             {/* Zooming background image */}
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-[800ms] ease-out group-hover:scale-110"
-              style={{ backgroundImage: `url('${service.img}')` }}
+              style={{ backgroundImage: `url('${asset(service.img)}')` }}
             />
             {/* Darkening overlay — keeps text readable, image shows through at the bottom */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/45" />

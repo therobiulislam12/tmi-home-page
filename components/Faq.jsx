@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+import { asset } from "@/lib/asset";
+
 // "FAQs" — heading + decorative line-art on the left, accordion on the right.
 // Single-open accordion; the first item is open by default.
 const FAQS = [
@@ -73,7 +75,7 @@ export default function Faq() {
           <div className="mt-14 flex justify-center lg:mt-20 lg:justify-start">
             {/* Mascot — spins slowly while hovered */}
             <img
-              src="/faq_image.png"
+              src={asset("/faq_image.png")}
               alt="Koi mascot"
               className="w-full max-w-[420px] rotate-45 hover:animate-[spin_14s_linear_infinite]"
             />

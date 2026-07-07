@@ -1,5 +1,7 @@
 // Each tile: thumbnail in /public/work + a `href` video link (opens in a new tab).
 // Swap the sample .svg files for real thumbnails and update `href` to real video URLs.
+import { asset } from "@/lib/asset";
+
 const PORTFOLIO = [
   { title: "Setel — EV Charging", image: "/work/1.jpg", href: "#" },
   { title: "Corporate Interview", image: "/work/2.jpg", href: "#" },
@@ -30,10 +32,10 @@ export default function Hero() {
         loop
         muted
         playsInline
-        poster="/hero-bg.jpg"
+        poster={asset("/hero-bg.jpg")}
       >
-        <source src="/hero-bg.mp4" type="video/mp4" />
-        <source src="/hero-bg.webm" type="video/webm" />
+        <source src={asset("/hero-bg.mp4")} type="video/mp4" />
+        <source src={asset("/hero-bg.webm")} type="video/webm" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/80 to-ink" />
 
@@ -93,7 +95,7 @@ export default function Hero() {
             >
               {/* Thumbnail — clean by default */}
               <img
-                src={item.image}
+                src={asset(item.image)}
                 alt={item.title}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

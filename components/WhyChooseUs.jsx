@@ -1,6 +1,8 @@
 // "Why Choose Us" — heading block + 3×2 grid (image cell + 5 icon feature cards),
 // laid over a dark textured background.
 // To use a real photo background, pass bgImage="/why-choose-bg.jpg".
+import { asset } from "@/lib/asset";
+
 const IMAGE = "/work/2.jpg";
 
 const NOISE =
@@ -122,7 +124,7 @@ export default function WhyChooseUs({ bgImage }) {
           {/* Image cell */}
           <div className="overflow-hidden rounded-2xl">
             <img
-              src={IMAGE}
+              src={asset(IMAGE)}
               alt="Our crew on set"
               className="h-full min-h-[280px] w-full object-cover grayscale"
             />
